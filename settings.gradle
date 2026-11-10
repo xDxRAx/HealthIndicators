@@ -2,7 +2,13 @@ pluginManagement {
     repositories {
         maven { url "https://maven.fabricmc.net/" }
         maven { url "https://maven.architectury.dev/" }
-        maven { url "https://files.minecraftforge.net/maven/" }
+        maven {
+            url "https://files.minecraftforge.net/maven/"
+            content {
+                includeGroup "de.oceanlabs.mcp"
+                includeGroup "net.minecraftforge"
+            }
+        }
         gradlePluginPortal()
     }
 }
@@ -11,4 +17,3 @@ rootProject.name = 'healthindicators'
 
 include 'common'
 include 'fabric'
-include 'neoforge'
